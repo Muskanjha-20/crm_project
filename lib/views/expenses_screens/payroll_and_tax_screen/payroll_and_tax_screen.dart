@@ -35,12 +35,10 @@ class _PayrollAndTaxScreenState extends State<PayrollAndTaxScreen> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: ListView.separated(
-          itemCount: dates.length, // Use the length of the dates list
+          itemCount: dates.length,
           separatorBuilder: (context, index) => const SizedBox(height: 10),
           itemBuilder:
-              (context, index) => PaymentCardWidget(
-                date: dates[index], // Pass the corresponding date for each card
-              ),
+              (context, index) => PaymentCardWidget(date: dates[index]),
         ),
       ),
     );
@@ -55,7 +53,7 @@ class PaymentCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 20, left: 10),
+      padding: const EdgeInsets.only(top: 10, bottom: 20, left: 10, right: 10),
       decoration: BoxDecoration(
         color: AppColors.whiteBackgroundColor,
         borderRadius: BorderRadius.circular(10),
