@@ -11,6 +11,16 @@ class PayrollAndTaxScreen extends StatefulWidget {
 }
 
 class _PayrollAndTaxScreenState extends State<PayrollAndTaxScreen> {
+  // List of different dates for each card
+  final List<String> dates = [
+    'September 2024',
+    'August 2024',
+    'July 2024',
+    'June 2024',
+    'May 2025',
+    'April 2025',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +35,12 @@ class _PayrollAndTaxScreenState extends State<PayrollAndTaxScreen> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: ListView.separated(
-          itemCount: 6,
+          itemCount: dates.length, // Use the length of the dates list
           separatorBuilder: (context, index) => const SizedBox(height: 10),
-          itemBuilder: (context, index) => const PaymentCardWidget(),
+          itemBuilder:
+              (context, index) => PaymentCardWidget(
+                date: dates[index], // Pass the corresponding date for each card
+              ),
         ),
       ),
     );
@@ -35,7 +48,9 @@ class _PayrollAndTaxScreenState extends State<PayrollAndTaxScreen> {
 }
 
 class PaymentCardWidget extends StatelessWidget {
-  const PaymentCardWidget({super.key});
+  final String date;
+
+  const PaymentCardWidget({super.key, required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +63,9 @@ class PaymentCardWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'September 2024',
-            style: TextStyle(
+          Text(
+            date,
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
               color: AppColors.blackTextColor,
