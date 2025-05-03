@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // home: MainScreen(),
-      home: SubmitExpensesScreen(),
+      home: MainScreen(),
+      // home: SubmitExpensesScreen(),
       // home: ExpensesScreen(),
       // home: TestCustomAppBar(title: 'hello'),
       // home: ApppBarrr(),
