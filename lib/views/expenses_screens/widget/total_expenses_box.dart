@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:list_project/views/constants/colors.dart';
-import 'package:list_project/views/expenses_screens/custom_total_expense_status_widget.dart.dart';
+import 'package:list_project/views/expenses_screens/widget/custom_total_expense_status_widget.dart.dart';
 
 class TotalExpensesBox extends StatelessWidget {
   const TotalExpensesBox({super.key, required this.expenseData});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:list_project/views/custom_bottom_navbar_screen/custom_bottom_navbar_screen.dart';
-import 'package:list_project/views/expenses_screens/submit_expenses_screen.dart';
+import 'package:list_project/views/expenses_screens/payroll_and_tax_screen/payroll_and_tax_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MainScreen(),
+      // home: MainScreen(),
+      home: PayrollAndTaxScreen(),
       // home: SubmitExpensesScreen(),
       // home: ExpensesScreen(),
       // home: TestCustomAppBar(title: 'hello'),

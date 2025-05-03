@@ -3,8 +3,8 @@ import 'package:list_project/views/constants/colors.dart';
 import 'package:list_project/views/customs/appbar/custom_appbar.dart';
 import 'package:list_project/views/customs/buttons/custom_flexible_button.dart';
 import 'package:list_project/views/expenses_screens/approved_list_screen.dart';
+import 'package:list_project/views/expenses_screens/list_item_review_list_widget.dart';
 import 'package:list_project/views/expenses_screens/rejected_list_screen.dart';
-import 'package:list_project/views/expenses_screens/review_list_screen.dart';
 
 class ExpensesScreen extends StatefulWidget {
   const ExpensesScreen({super.key});
@@ -63,7 +63,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
                     Expanded(
                       child: TabBarView(
                         children: [
-                          ReviewListScreen(),
+                          ListItemReviewListWidget(),
                           ApprovedListScreen(),
                           RejectedListScreen(),
                         ],

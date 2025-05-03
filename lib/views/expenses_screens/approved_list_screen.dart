@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:list_project/views/constants/colors.dart';
 import 'package:list_project/views/expenses_screens/custom_list_item_expense_widget.dart';
 import 'package:list_project/views/expenses_screens/expenses_approved_list_details.dart';
-import 'package:list_project/views/expenses_screens/total_expenses_box.dart';
+import 'package:list_project/views/expenses_screens/widget/total_expenses_box.dart';
 
 class ApprovedListScreen extends StatelessWidget {
   const ApprovedListScreen({super.key});
